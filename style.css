@@ -1,0 +1,714 @@
+:root {
+    --orange: #FB9300;
+    --gray: #575757;
+    --dark: #333333;
+ /* ===== ФИРМЕННЫЙ ЦВЕТ ===== */
+    --orange: #FB9300;
+    --orange-light: #FFD699;
+    --orange-dark: #E08000;
+
+    /* ===== СВЕТЛАЯ ТЕМА ===== */
+    --light-bg: #ffffff;
+    --light-bg-soft: #FFF8F0;
+    --light-bg-pink: #FFF0F0;
+    --light-text: #333333;
+    --light-text-muted: #575757;
+
+    /* ===== ТЁМНАЯ ТЕМА (для футера) ===== */
+    --dark-bg: #1a1a1a;
+    --dark-text: #ffffff;
+    --dark-text-muted: #aaaaaa;
+    --dark-border: #3a3a3a;
+
+    /* ===== ТЕНИ ===== */
+    --shadow-card: 0 4px 25px rgba(0, 0, 0, 0.06);
+    --shadow-header: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins";
+}
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    top: 0;
+    padding-block: 30px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+[class*="__container"] {
+    max-width: 1184px;
+    margin-inline: auto;
+}
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__list {
+    display: flex;
+    gap: 49px;
+}
+ul {
+    list-style: none;
+}
+.header__list-link {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: var(--gray);
+    transition: color 0.4s;
+}
+.header__list-link.active {
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.header__list-link:hover {
+    color: var(--orange);
+}
+a {
+    text-decoration: none;
+}
+.header__button, .hero__button2 {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: white;
+    padding: 16.5px 47px;
+    border-radius: 100px;
+    transition: 0.4s;
+}
+.header__button, .hero__button2 {
+    background: var(--orange);
+}
+.header__button:hover, .hero__button2:hover {
+    opacity: 77%;
+}
+main {
+    margin-top: 141px;
+}
+.hero {
+    padding-block: 70px;
+    background: transparent;
+}
+.hero__container {
+    position: relative;
+    overflow: visible;
+}
+.hero__content {
+    max-width: 590px;
+    padding-block: 15.5px;
+}
+.hero__buttons {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 30px;
+}
+.hero__button {
+    background-color: #FB933330;
+    color: orange;
+}
+.hero__button  {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #FB9300;
+    padding: 16px;
+    border-radius: 100px;
+}
+.hero__title {
+    font-weight: 700;
+    font-size: 72px;
+    letter-spacing: -0.02em;
+    line-height: 130%;
+    color: var(--gray);
+    margin: 30px 0;
+}
+.hero__title-highlight {
+    color: var(--orange); 
+}
+.hero__desc {
+    font-family: "Poppins";
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    line-height: 160%;
+    color: var(--gray);
+    margin: 30px 94px 30px 0px;
+}
+.hero__stats {
+    display: flex;
+    gap: 52px;
+    margin: 88px 238px 50.5px 0;
+    font-family: "Poppins";
+}
+.hero__image {
+    position: absolute;
+    top: 0;
+    right: -75px;
+}
+.hero__title-in {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--gray);
+    line-height: 160%;
+}
+.hero__desc-ii {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color:#828282;
+}
+.feature__text {
+    display: flex;
+    margin: 100px 0 64px 0;
+    letter-spacing: -0.02em;
+}
+.feature__title-color {
+    color: var(--orange);
+}
+.feature__title {
+    margin-right: ;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+    color: var(--gray);
+}
+.feature__desc {
+    margin-left: 134px;
+    margin-top: 13px;
+    line-height: 180%;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gray);
+    margin-bottom: 13px;
+}
+.subscription__plans {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+.subscription__plan {
+    padding: 30px 30px;
+    border-radius: 50px;
+    flex: 1;
+    background-color: whitesmoke;
+}
+.subscription__plan-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 180%;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+    margin: 70px 0 12px 0px;
+}
+.subscription__plan-log  {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: -0.02em;
+    color: var(--gray);
+    margin-bottom: 24px;
+}
+.subscription__plan-button {
+    position: relative;
+    display: inline-flex;
+    padding: 10px 24px;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: -0.02em;
+    color: white;
+    border-radius: 100px;
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: var(--orange);
+    border: none;
+}
+.subscription__plan-button::after {
+    content: "➜";
+    font-size: 25px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+.subscription__plan-button:hover::after {
+    transform: translateX(5px);
+}
+.subscription__plan-button:hover {
+    opacity: 77%;
+}
+body {
+    background-image: 
+        radial-gradient(circle at 30% 40%, rgba(144, 238, 144, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.04) 0%, transparent 60%),
+        radial-gradient(circle at 50% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%);
+    min-height: 100vh;
+}
+.testimonials__arrows {
+    display: flex;
+    gap: 12px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #FB9300;
+}
+.arrow:hover {
+    background: var(--orange);        /* ← ТЁМНЕЕ ПРИ НАВЕДЕНИИ */
+    transform: scale(1.05);     /* ← ЧУТЬ УВЕЛИЧИВАЕТСЯ */
+}
+
+.arrow:active {
+    transform: scale(0.95);     /* ← ЭФФЕКТ НАЖАТИЯ */
+}
+.testimonials__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+    color: var(--dark);
+    letter-spacing: 0;
+    padding: 138px 88px 30px 0;
+}
+.testimonials__title-color {
+    color: var(--orange);
+}
+.testimonials__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray);
+    padding-bottom: 32px;
+}
+h1.testimonials__number {
+    font-size: 48px;
+}
+.testimonials__numbers {
+    display: flex;
+    align-items: center;
+    padding-bottom: 24px;
+    gap: 0;
+}
+.testimonials__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    min-height: 50px;        
+    color: var(--dark);
+    font-weight: 600;
+}
+.testimonials__number:last-child {
+    font-size: 16px;
+    color: var(--gray);
+    opacity: 0.5;
+    font-weight: 400;
+    transform: translateY(8px);
+}
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР — ТЕКСТ СЛЕВА, КАРТОЧКИ СПРАВА ===== */
+.testimonials__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    padding-block: 60px;
+}
+
+
+
+/* ===== ПРАВАЯ ЧАСТЬ — КАРТОЧКИ ===== */
+.testimonials__reviews-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex: auto;
+    margin-top: 140px;
+    overflow: hidden;
+    padding-right: 30px;
+    width: 895px;
+    height: 442px;
+    padding-left: 0;
+    margin-bottom: 120px;
+}
+
+.testimonials__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 26px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+    flex: 0 0 250px;
+}
+.testimonials__left {
+    flex: 0 0 500px;
+}
+.testimonials__reviews-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.testimonials__reviews-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials__reviews-famili {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--dark);
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+.testimonials__reviews-age {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--gray);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.testimonials__riviews-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 170%;
+    color: var(--gray);
+}
+.menu__title {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 71px;
+}
+.menu__title-text {
+    color: var(--orange);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 180%;
+}
+.menu__title-desc {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+    color: var(--gray);
+    padding-top: 12px;
+}
+.menu__title-desc-color {
+    color: var(--orange);
+}
+.testimonials {
+    background-color: #FFF8F0;   /* или любой другой */
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 50px,
+        rgba(251, 147, 0, 0.06) 50px,
+        rgba(251, 147, 0, 0.06) 54px
+    );
+}
+.menu__images {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.menu__card {
+    width: 363.33px;
+    height: 521px;
+}
+
+.menu__card-image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.menu__card-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.menu__card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 39px 39px 39px;
+}
+
+.menu__card-title {
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+.menu__card-price {
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    margin: 0;
+}
+.subscribe {
+    padding: 148px 0 ;
+    background: #FFF0F0;  
+    text-align: center;
+}
+.subscribe__title {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--orange);
+    letter-spacing: -0.02em;
+    margin-bottom: px;
+    line-height: 180%;
+}
+.subscribe__subtitle {
+    font-weight: 600;
+    font-size: 48px;
+    color: var(--gray);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    line-height: 140%;
+}
+.subscribe__desc {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto 40px;         /* ← центрируем описание */
+    line-height: 160%;
+    letter-spacing: -0.02em;
+    padding-bottom: 80px;
+}
+.subscribe__field {
+    position: relative;
+    display: flex;
+    max-width: 700px;                 /* ← шире */
+    margin: 0 auto;
+    background: white;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.subscribe__input {
+    flex: 1;
+    padding: 26px 180px 26px 32px;    /* ← выше */
+    border: none;
+    border-radius: 100px;
+    font-size: 18px;                 /* ← текст крупнее */
+    outline: none;
+    background: transparent;
+}
+
+.subscribe__input::placeholder {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.subscribe__button {
+    position: absolute;
+    top: 8px;                         /* ← отступ сверху */
+    right: 8px;                       /* ← отступ справа */
+    bottom: 8px;                      /* ← отступ снизу */
+    padding: 0 40px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 18px;                 /* ← крупнее */
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+/* ===== FOOTER ===== */
+.footer {
+    background: hsl(28, 12%, 21%);           /* ← тёмный фон */
+    color: white;
+    padding: 60px 0 40px;
+    margin-top: 60px;
+}
+
+.footer__container {
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* ===== КОЛОНКА 1: ЛОГОТИП ===== */
+.footer__brand {
+    flex: 1;
+    max-width: 350px;
+}
+
+.footer__logo {
+    font-weight: 700;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.footer__desc {
+    font-weight: 400;
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 170%;
+    margin-bottom: 20px;
+}
+
+.footer__copyright {
+    font-weight: 400;
+    font-size: 13px;
+    color: #777777;
+}
+
+/* ===== КОЛОНКА 2: НАВИГАЦИЯ ===== */
+.footer__nav {
+    flex: 0 0 auto;
+}
+
+.footer__nav-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__nav-link {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 6px 0;
+    transition: 0.3s;
+}
+
+.footer__nav-link:hover {
+    color: var(--orange);
+}
+
+/* ===== КОЛОНКА 3: КОНТАКТЫ ===== */
+.footer__contacts {
+    flex: 0 0 auto;
+    max-width: 300px;
+}
+
+.footer__contacts-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.footer__contacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__contacts-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #aaaaaa;
+    padding: 6px 0;
+    line-height: 150%;
+}
+
+.footer__contacts-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+    color: var(--orange);
+    width: 20px;
+    text-align: center;
+}
+/* ===== HEADER ===== */
+.header {
+    background: var(--light-bg);
+    box-shadow: var(--shadow-header);
+}
+
+/* ===== ВСЕ СЕКЦИИ (кроме футера) ===== */
+.hero,
+.features,
+.subscriptions,
+.testimonials,
+.menu {
+    background: var(--light-bg);
+}
+
+/* ===== SUBSCRIBE ===== */
+.subscribe {
+    background: var(--light-bg-pink);
+}
+
+/* ===== FOOTER (ТЁМНЫЙ) ===== */
+.footer {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.footer__logo {
+    color: var(--dark-text);
+}
+
+.footer__desc,
+.footer__nav-link,
+.footer__contacts-item {
+    color: var(--dark-text-muted);
+}
+
+.footer__nav-title,
+.footer__contacts-title {
+    color: var(--dark-text);
+}
+
+.footer__nav-link:hover {
+    color: var(--orange);
+}
+
+.footer__contacts-icon {
+    color: var(--orange);
+}
